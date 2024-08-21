@@ -1,0 +1,8 @@
+SELECT TOP (1000) [CustID]
+		,[CustName]
+		,[Segment]
+		,[City]
+		,[State]
+		,[PostalCode]
+		,[Region]
+	FROM [TestDB].[dbo].[tblCustomer]

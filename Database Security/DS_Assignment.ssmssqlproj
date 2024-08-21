@@ -1,0 +1,94 @@
+<?xml version="1.0"?>
+<SqlWorkbenchSqlProject xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="DS_Assignment">
+  <Items>
+    <LogicalFolder Name="Connections" Type="2" Sorted="true">
+      <Items>
+        <ConnectionNode Name="LAPTOP-OI8BOVH9\SQLEXPRESS:Admin">
+          <Created>2024-02-28T23:25:04.248138+08:00</Created>
+          <Type>SQL</Type>
+          <Server>LAPTOP-OI8BOVH9\SQLEXPRESS</Server>
+          <UserName>Admin</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>TestDB</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="LAPTOP-OI8BOVH9\SQLEXPRESS:Customer">
+          <Created>2024-02-28T16:32:30.0545471+08:00</Created>
+          <Type>SQL</Type>
+          <Server>LAPTOP-OI8BOVH9\SQLEXPRESS</Server>
+          <UserName>Customer</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB>TestDB</InitialDB>
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+        <ConnectionNode Name="LAPTOP-OI8BOVH9\SQLEXPRESS:sa">
+          <Created>2024-02-28T22:24:24.4491677+08:00</Created>
+          <Type>SQL</Type>
+          <Server>LAPTOP-OI8BOVH9\SQLEXPRESS</Server>
+          <UserName>sa</UserName>
+          <Authentication>SQL</Authentication>
+          <InitialDB />
+          <LoginTimeout>30</LoginTimeout>
+          <ExecutionTimeout>0</ExecutionTimeout>
+          <ConnectionProtocol>NotSpecified</ConnectionProtocol>
+          <ApplicationName>Microsoft SQL Server Management Studio - Query</ApplicationName>
+        </ConnectionNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Queries" Type="0" Sorted="true">
+      <Items>
+        <FileNode Name="AuthorizeCust.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>AuthorizeCust.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Backup.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Backup.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Encryption.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Encryption.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Injection.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Injection.sql</FullPath>
+        </FileNode>
+        <FileNode Name="Restore.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:sa</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>sa</AssociatedConnUserName>
+          <FullPath>Restore.sql</FullPath>
+        </FileNode>
+        <FileNode Name="TestAuthorize.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:Customer</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>Customer</AssociatedConnUserName>
+          <FullPath>TestAuthorize.sql</FullPath>
+        </FileNode>
+        <FileNode Name="ViewEncryption.sql">
+          <AssociatedConnectionMoniker>8c91a03d-f9b4-46c0-a305-b5dcc79ff907:LAPTOP-OI8BOVH9\SQLEXPRESS:False:Customer</AssociatedConnectionMoniker>
+          <AssociatedConnSrvName>LAPTOP-OI8BOVH9\SQLEXPRESS</AssociatedConnSrvName>
+          <AssociatedConnUserName>Customer</AssociatedConnUserName>
+          <FullPath>ViewEncryption.sql</FullPath>
+        </FileNode>
+      </Items>
+    </LogicalFolder>
+    <LogicalFolder Name="Miscellaneous" Type="3" Sorted="true">
+      <Items />
+    </LogicalFolder>
+  </Items>
+</SqlWorkbenchSqlProject>
