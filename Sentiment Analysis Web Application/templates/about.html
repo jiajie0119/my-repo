@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <title>About Our Sentiment Analysis System</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <h1>Sentiment Analysis Dashboard</h1>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('about') }}" class="active">About</a>
+                        </li>
+                        <li>
+                            <a href="#" >Analysis Results</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('contact_us') }}">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('logout') }}">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <span class="material-icons">
+                    segment
+                </span>
+            </div>     
+        </div>
+    </nav>
+
+    <nav class="sidebar">
+        <div class="container">
+            <h3 class="title">Menu</h3>
+            <ul>
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <span class="material-icons">
+                            home
+                        </span>
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('user_profile') }}">
+                        <span class="material-icons">
+                            lock
+                        </span>
+                        <span>User Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('help') }}">
+                        <span class="material-icons">
+                            help
+                        </span>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="note">
+                <h1>What's New</h1>
+                <p>
+                    Stay notified with the latest updates and bug fixes in this brand new version 1.0
+                </p>
+                <!-- Change this to a button that triggers the popup -->
+                <button id="openPopup" class="btn">Learn More</button>
+            </div>
+            <div class="sidebar-footer">
+                <p>Copyright &copy; 2024 by Jia Jie | all rights reserved!</p>
+            </div>
+        </div>
+
+        <div id="featurePopup" class="popup">
+            <span id="closePopup" class="close">&times;</span>
+            <div class="popup-content">
+                <h1>What's New in Version 1.0</h1>
+                <p>
+                    We are excited to introduce the latest updates in Version 1.0, which include:
+                </p>
+                <ul>
+                    <li>Enhanced user interface for better experience</li>
+                    <li>Optimized performance and faster load times</li>
+                    <li>New features for advanced sentiment analysis</li>
+                    <li>Bug fixes and security updates</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <header class="about-header">
+                <h1>About Our Sentiment Analysis System</h1>
+                <p>Analyzing user reviews with precision to help businesses improve and understand customer feedback.</p>
+        </header>
+    
+        <section class="about-intro">
+            <div class="about-container">
+                <h2>What is This System?</h2>
+                <p>
+                    Our sentiment analysis system is designed to help businesses gather insights from user reviews 
+                    across platforms such as Facebook. It uses advanced sentiment analysis techniques to classify 
+                    reviews into positive, neutral, or negative sentiments, giving you a clear picture of customer 
+                    feedback.
+                </p>
+            </div>
+        </section>
+    
+        <section class="about-features">
+            <div class="about-container">
+                <h2>Key Features</h2>
+                <ul>
+                    <li>Real-time scraping and analysis of Facebook reviews</li>
+                    <li>Easy-to-understand sentiment analysis results</li>
+                    <li>Interactive dashboard with charts and visual data representation</li>
+                </ul>
+            </div>
+        </section>
+    
+        <section class="about-how-it-works">
+            <div class="about-container">
+                <h2>How It Works</h2>
+                <p>The system follows these steps:</p>
+                <ol>
+                    <li>Scrape reviews from the given Facebook URL using our scraping tool.</li>
+                    <li>Perform sentiment analysis on the scraped reviews using NLP techniques.</li>
+                    <li>Display results in an easy-to-read dashboard with bar charts, pie charts, and a sentiment index.</li>
+                </ol>
+            </div>
+        </section>
+    
+        <section class="about-tech-stack">
+            <div class="about-container">
+                <h2>Technology Stack</h2>
+                <ul>
+                    <li>Frontend: HTML, CSS, JavaScript</li>
+                    <li>Backend: Flask (Python)</li>
+                    <li>Data Visualization: Plotly.js</li>
+                    <li>Sentiment Analysis: NLTK (Natural Language Toolkit)</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
