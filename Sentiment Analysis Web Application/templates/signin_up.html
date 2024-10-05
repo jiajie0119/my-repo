@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register & Login</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+</head>
+<body>
+    <div class="auth-container">
+        <div id="signup" class="auth-box" style="display:none;">
+            <h2 id="register" class="auth-title">Register</h2>
+            <div id="signUpMessage" class="message-div" style="display:none;"></div>
+            <form id="signUpForm">
+                <div class="input-group">
+                    <input type="text" id="fName" placeholder="First Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="text" id="lName" placeholder="Last Name" required>
+                </div>
+                <div class="input-group">
+                    <input type="email" id="rEmail" placeholder="Email" required autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="rPassword" placeholder="Password" required autocomplete="current-password">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="confirmPassword" placeholder="Confirm Password" required autocomplete="new-password">
+                </div>
+                <button type="submit" id="submitSignUp" class="auth-btn">Sign Up</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="auth-links">
+                <p>Already Have Account? <a href="#" id="showSignIn">Sign In</a></p>
+            </div>
+        </div>
+    
+        <div id="signIn" class="auth-box">
+            <h2 class="auth-title">Sign In</h2>
+            <div id="signInMessage" class="message-div" style="display:none;"></div>
+            <form id="signInForm">
+                <div class="input-group">
+                    <input type="email" id="email" placeholder="Email" required autocomplete="email">
+                </div>
+                <div class="input-group">
+                    <input type="password" id="password" placeholder="Password" required autocomplete="current-password">
+                </div>
+                <a href="#" class="forgot-password" id="forgotPasswordLink">Forgotten your password?</a>
+                <button type="submitSignIn" class="auth-btn">Sign In</button>
+            </form>
+            <div class="auth-divider">
+                <span>or</span>
+            </div>
+            <div class="auth-links">
+                <p>Don't have account yet? <a href="#" id="showSignUp">Sign Up</a></p>
+            </div>
+        </div>
+        <div id="forgotPassword" class="auth-box" style="display:none;">
+            <h2 class="auth-title">Reset Password</h2>
+            <div id="resetMessage" class="message-div" style="display:none;"></div>
+            <form id="resetPasswordForm">
+                <div class="input-group">
+                    <input type="email" id="resetEmail" placeholder="Enter your email" required autocomplete="email">
+                </div>
+                <button type="submit" id="submitRecovery" class="auth-btn">Send Reset Link</button>
+            </form>
+            <div class="auth-links">
+                <p>Remembered your password? <a href="#" id="showSignInFromReset">Sign In</a></p>
+            </div>
+        </div>       
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const signInForm = document.getElementById('signIn');
+            const signUpForm = document.getElementById('signup');
+            const showSignInLink = document.getElementById('showSignIn');
+            const showSignUpLink = document.getElementById('showSignUp');
+            const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+            const forgotPasswordForm = document.getElementById('forgotPassword');
+            const showSignInFromResetLink = document.getElementById('showSignInFromReset');
+            
+            forgotPasswordLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                signInForm.style.display = 'none';
+                signUpForm.style.display = 'none';
+                forgotPasswordForm.style.display = 'block';
+            });           
+
+            showSignInLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                signUpForm.style.display = 'none';
+                signInForm.style.display = 'block';
+            });
+        
+            showSignUpLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                signInForm.style.display = 'none';
+                signUpForm.style.display = 'block';
+            });
+
+            showSignInFromResetLink.addEventListener('click', function(e) {
+                e.preventDefault();
+                forgotPasswordForm.style.display = 'none'; // Hide forgot password form
+                signInForm.style.display = 'block'; // Show sign in form
+            });
+        });
+    </script>
+
+    <script type="module" src="{{ url_for('static', filename='firebaseauth.js') }}"></script>
+</body>
+</html>

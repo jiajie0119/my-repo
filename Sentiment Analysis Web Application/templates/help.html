@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <!-- Stylesheet-->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='images/favicon.png') }}">
+    <title>Sentiment Analysis Dashboard</title>
+</head>
+<body>
+
+    <nav class="navbar">
+        <div class="container">
+            <div>
+                <h1>Sentiment Analysis Dashboard</h1>
+                <div class="menu">
+                    <ul>
+                        <li>
+                            <a href="{{ url_for('home') }}">Home</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('about') }}">About</a>
+                        </li>
+                        <li>
+                            <a href="#" >Analysis Results</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('contact_us') }}">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="{{ url_for('logout') }}">Log Out</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="menu-btn">
+                <span class="material-icons">
+                    segment
+                </span>
+            </div>     
+        </div>
+    </nav>
+
+    <nav class="sidebar">
+        <div class="container">
+            <h3 class="title">Menu</h3>
+            <ul>
+                <li>
+                    <a href="{{ url_for('home') }}">
+                        <span class="material-icons">
+                            home
+                        </span>
+                        <span>
+                            Home
+                        </span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('user_profile') }}">
+                        <span class="material-icons">
+                            lock
+                        </span>
+                        <span>User Profile</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{ url_for('help') }}">
+                        <span class="material-icons">
+                            help
+                        </span>
+                        <span>Help</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="note">
+                <h1>What's New</h1>
+                <p>
+                    Stay notified with the latest updates and bug fixes in this brand new version 1.0
+                </p>
+                <!-- Change this to a button that triggers the popup -->
+                <button id="openPopup" class="btn">Learn More</button>
+            </div>
+            <div class="sidebar-footer">
+                <p>Copyright &copy; 2024 by Jia Jie | all rights reserved!</p>
+            </div>
+        </div>
+
+        <div id="featurePopup" class="popup">
+            <span id="closePopup" class="close">&times;</span>
+            <div class="popup-content">
+                <h1>What's New in Version 1.0</h1>
+                <p>
+                    We are excited to introduce the latest updates in Version 1.0, which include:
+                </p>
+                <ul>
+                    <li>Enhanced user interface for better experience</li>
+                    <li>Optimized performance and faster load times</li>
+                    <li>New features for advanced sentiment analysis</li>
+                    <li>Bug fixes and security updates</li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <div class="help-section">
+            <h2>How Can We Help?</h2>
+            
+            <!-- FAQ Section with Dropdown -->
+            <div class="faq-section">
+                <h3>Frequently Asked Questions (FAQs)</h3>
+                
+                <div class="faq-item">
+                    <h4 class="faq-question">1. How do I access the sentiment analysis dashboard?</h4>
+                    <p class="faq-answer">You can access the dashboard by logging into your account and navigating to the 'Home' tab. From there, you can insert your link for sentiment analysis.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="faq-question">2. How does the system analyze reviews?</h4>
+                    <p class="faq-answer">Our system uses advanced Natural Language Processing (NLP) techniques to classify user reviews into positive, neutral, or negative sentiments.</p>
+                </div>
+        
+                <div class="faq-item">
+                    <h4 class="faq-question">3. Is my data secure?</h4>
+                    <p class="faq-answer">Yes, your data is securely stored. We follow standard practices to ensure data privacy and security.</p>
+                </div>
+                
+                <div class="faq-item">
+                    <h4 class="faq-question">4. Can I export the analysis results?</h4>
+                    <p class="faq-answer">Yes, you can export the sentiment analysis results in PDF format directly from the dashboard.</p>
+                </div>
+        
+                <div class="faq-item">
+                    <h4 class="faq-question">5. Is the sentiment analysis in real-time?</h4>
+                    <p class="faq-answer">Yes, once the system scrapes the reviews, the sentiment analysis is processed in real-time and displayed on the dashboard.</p>
+                </div>
+        
+                <div class="faq-item">
+                    <h4 class="faq-question">6. How often is the data updated?</h4>
+                    <p class="faq-answer">The data is updated in real-time as soon as new reviews are scraped from the integrated platforms.</p>
+                </div>
+            </div>
+        
+            <!-- Link to Contact Page -->
+            <div class="contact-support">
+                <h3>Need Further Assistance?</h3>
+                <p>If you still have questions or need technical support, please visit our <a href="{{ url_for('contact_us') }}">Contact Us</a> page for more help.</p>
+            </div>
+        </div>
+        
+    </main>
+
+    <script>
+        document.querySelectorAll('.faq-question').forEach(item => {
+            item.addEventListener('click', event => {
+                // Toggle visibility of the answer
+                const answer = item.nextElementSibling;
+                answer.style.display = answer.style.display === 'block' ? 'none' : 'block';
+            });
+        });
+    </script>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+</html>
